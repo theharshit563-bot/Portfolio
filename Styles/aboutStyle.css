@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Poppins",sans-serif;
+    background:#0f0f14;
+    color:#e6e6e6;
+    line-height:1.6;
+}
+
+/* ===== NAVBAR ===== */
+
+header{
+    padding:25px 10%;
+    background:rgba(20,20,30,0.7);
+    backdrop-filter:blur(10px);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav h1{
+    font-size:1.8rem;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#e6e6e6;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#7c7cff;
+}
+
+/* ===== MAIN ===== */
+
+main{
+    padding:60px 10%;
+}
+
+section{
+    margin-bottom:70px;
+    animation:fadeUp 1s ease;
+}
+
+h2{
+    color:#7c7cff;
+    margin-bottom:15px;
+}
+
+p{
+    max-width:650px;
+    color:#bdbddd;
+}
+
+/* ===== SKILLS GRID ===== */
+
+section:nth-of-type(3)::-webkit-scrollbar{
+    height:8px;
+}
+
+section:nth-of-type(3)::-webkit-scrollbar-thumb{
+    background:#7c7cff;
+    border-radius:10px;
+}
+
+
+/* ===== SKILL CARD ===== */
+
+.card{
+    background:#181825;
+    padding:20px;
+    border-radius:15px;
+    transition:0.3s;
+    box-shadow:0 0 15px rgba(124,124,255,0.15);
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 0 30px rgba(124,124,255,0.4);
+}
+
+.card h3{
+    margin-bottom:8px;
+}
+
+/* ===== PROGRESS BAR ===== */
+
+.bar{
+    width:100%;
+    height:10px;
+    background:#2a2a40;
+    border-radius:10px;
+    overflow:hidden;
+    margin-top:8px;
+}
+
+.progress{
+    height:100%;
+    background:linear-gradient(90deg,#7c7cff,#b084ff);
+    border-radius:10px;
+    transition:width 1.5s ease;
+}
+
+/* ===== LISTS ===== */
+
+section ul{
+    padding-left:20px;
+}
+
+section ul li{
+    margin:8px 0;
+    color:#d0d0ff;
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+
+    padding:40px 10%;
+    border-top:1px solid rgba(255,255,255,0.08);
+}
+
+footer ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+    margin:15px 0;
+}
+
+footer a{
+    text-decoration:none;
+    color:#e6e6e6;
+    transition:0.3s;
+}
+
+footer a:hover{
+    color:#7c7cff;
+}
+
+/* ===== ANIMATION ===== */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    main{
+        padding:40px 8%;
+    }
+
+}

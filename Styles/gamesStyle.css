@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Poppins", sans-serif;
+    background:#0f0f14;
+    color:#e6e6e6;
+}
+
+/* ===== NAVBAR ===== */
+
+header{
+    padding:25px 10%;
+    background:rgba(20,20,30,0.7);
+    backdrop-filter:blur(10px);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#e6e6e6;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#7c7cff;
+}
+
+/* ===== MAIN ===== */
+
+main{
+    padding:60px 10%;
+}
+
+/* ===== GAME SECTION ===== */
+
+#games{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+/* ===== GAME CARD ===== */
+
+.game-card{
+    background:#181825;
+    padding:25px;
+    border-radius:18px;
+    width:320px;
+    text-align:center;
+
+    transition:0.4s;
+    box-shadow:0 0 20px rgba(124,124,255,0.15);
+
+    opacity:0;
+    transform:translateY(40px);
+}
+
+.game-card:hover{
+    transform:translateY(-8px) scale(1.02);
+    box-shadow:0 0 35px rgba(124,124,255,0.4);
+}
+
+.game-card h2{
+    color:#7c7cff;
+    margin-bottom:15px;
+}
+
+/* ===== GAME IMAGE ===== */
+
+.game-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:12px;
+    margin-bottom:15px;
+}
+
+/* ===== DOWNLOAD BUTTON ===== */
+
+.game-card a{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 20px;
+    border-radius:10px;
+
+    background:linear-gradient(90deg,#7c7cff,#b084ff);
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+
+    transition:0.3s;
+}
+
+.game-card a:hover{
+    transform:scale(1.08);
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+
+    padding:40px 10%;
+    border-top:1px solid rgba(255,255,255,0.08);
+}
+
+footer ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+    margin:15px 0;
+}
+
+footer a{
+    text-decoration:none;
+    color:#e6e6e6;
+    transition:0.3s;
+}
+
+footer a:hover{
+    color:#7c7cff;
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    main{
+        padding:40px 8%;
+    }
+
+    .game-card{
+        width:100%;
+    }
+
+}
