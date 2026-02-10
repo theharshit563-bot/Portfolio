@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Poppins", sans-serif;
+    background:#0f0f14;
+    color:#e6e6e6;
+    line-height:1.6;
+}
+
+/* ===== NAVBAR ===== */
+
+header{
+    padding:25px 10%;
+    background:rgba(20,20,30,0.7);
+    backdrop-filter:blur(10px);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav h1{
+    font-size:1.8rem;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#e6e6e6;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#7c7cff;
+}
+
+/* ===== MAIN ===== */
+
+main{
+    padding:60px 10%;
+}
+
+section{
+    margin-top:40px;
+}
+
+/* ===== PROJECT CARD ===== */
+
+.project-card{
+    margin-top:25px;
+    background:#181825;
+    padding:25px;
+    border-radius:18px;
+    transition:0.4s;
+    box-shadow:0 0 20px rgba(124,124,255,0.15);
+
+    opacity:0;
+    transform:translateY(40px);
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 35px rgba(124,124,255,0.4);
+}
+
+.project-card h3{
+    color:#7c7cff;
+    margin-bottom:15px;
+}
+
+/* ===== TERMINAL BOX ===== */
+
+.terminal-box{
+    background:#0b0b11;
+    padding:18px;
+    border-radius:14px;
+    margin:20px 0;
+
+    border:1px solid rgba(124,124,255,0.2);
+    box-shadow:inset 0 0 20px rgba(124,124,255,0.08);
+}
+
+/* ===== TERMINAL PRE ===== */
+
+.terminal-box pre{
+    font-family:monospace;
+    font-size:0.85rem;
+    color:#b5ffb5;
+
+    max-height:220px;
+    overflow:auto;
+    white-space:pre;
+
+    padding-right:8px;
+}
+
+/* ===== CUSTOM SCROLLBAR ===== */
+
+.terminal-box pre::-webkit-scrollbar{
+    width:8px;
+    height:8px;
+}
+
+.terminal-box pre::-webkit-scrollbar-track{
+    background:#12121a;
+    border-radius:10px;
+}
+
+.terminal-box pre::-webkit-scrollbar-thumb{
+    background:linear-gradient(180deg,#7c7cff,#b084ff);
+    border-radius:10px;
+    border:2px solid #12121a;
+}
+
+.terminal-box pre::-webkit-scrollbar-thumb:hover{
+    background:linear-gradient(180deg,#9c9cff,#c5a0ff);
+}
+
+/* Firefox scrollbar */
+.terminal-box pre{
+    scrollbar-color:#7c7cff #12121a;
+    scrollbar-width:thin;
+}
+
+/* ===== BUTTON ===== */
+
+.project-card a{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 20px;
+    border-radius:10px;
+
+    background:linear-gradient(90deg,#7c7cff,#b084ff);
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+
+    transition:0.3s;
+}
+
+.project-card a:hover{
+    transform:scale(1.08);
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+
+    padding:40px 10%;
+    border-top:1px solid rgba(255,255,255,0.08);
+}
+
+footer ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+    margin:15px 0;
+}
+
+footer a{
+    text-decoration:none;
+    color:#e6e6e6;
+    transition:0.3s;
+}
+
+footer a:hover{
+    color:#7c7cff;
+}
+
+/* ===== ANIMATION ===== */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+    main{
+        padding:40px 8%;
+    }
+
+}
